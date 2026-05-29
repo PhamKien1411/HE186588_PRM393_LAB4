@@ -13,7 +13,7 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
   String _selectedGenre = 'None';
   DateTime? _selectedDate;
 
-  // Hàm gọi hiển thị DatePicker từ BuildContext hợp lệ
+
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -21,8 +21,8 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
       firstDate: DateTime(2000),
       lastDate: DateTime(2101),
     );
+
     if (picked != null && picked != _selectedDate) {
-      // Gọi setState để cập nhật lại UI khi dữ liệu thay đổi
       setState(() {
         _selectedDate = picked;
       });
@@ -38,7 +38,7 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Slider điều chỉnh Rating
+
             const Text('Rating (Slider)', style: TextStyle(fontWeight: FontWeight.bold)),
             Slider(
               value: _sliderValue,
@@ -49,7 +49,7 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
             Text('Current value: ${_sliderValue.toInt()}'),
             const SizedBox(height: 20),
 
-            // Switch kích hoạt trạng thái
+
             const Text('Active (Switch)', style: TextStyle(fontWeight: FontWeight.bold)),
             SwitchListTile(
               title: const Text('Is movie active?'),
@@ -58,7 +58,7 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
             ),
             const SizedBox(height: 20),
 
-            // Nhóm RadioListTile lựa chọn Genre
+
             const Text('Genre (RadioListTile)', style: TextStyle(fontWeight: FontWeight.bold)),
             RadioListTile<String>(
               title: const Text('Action'),
@@ -75,7 +75,7 @@ class _InputControlsDemoState extends State<InputControlsDemo> {
             Text('Selected genre: $_selectedGenre'),
             const SizedBox(height: 20),
 
-            // Button kích hoạt Picker công cụ
+
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(

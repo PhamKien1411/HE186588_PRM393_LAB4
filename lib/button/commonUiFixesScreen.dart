@@ -18,12 +18,6 @@ class CommonUIFixesScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            /* * GIẢI THÍCH SỬA LỖI THEO YÊU CẦU CỦA LAB:
-             * - Nguyên nhân: Bản chất Column không giới hạn chiều cao cho các widget con,
-             * trong khi ListView mặc định muốn chiếm vô tận không gian trục dọc => Gây ra xung đột kích thước vô hạn (Unbounded height).
-             * - Giải pháp: Bọc ListView lại bằng widget `Expanded`. Widget này sẽ tính toán phần diện tích
-             * còn lại khả dụng của màn hình thiết bị và ép ListView chỉ được phép hiển thị gọn trong phạm vi đó[cite: 55].
-             */
             Expanded(
               child: ListView(
                 children: const [

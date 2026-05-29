@@ -11,7 +11,7 @@ class LayoutDemoScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Exercise 3 – Layout Demo')),
       body: Column(
         children: [
-          // Áp dụng spacing đồng bộ bằng Padding (16px)
+
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
@@ -19,7 +19,7 @@ class LayoutDemoScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          // Sử dụng Expanded bao bọc để ListView.builder không bị tràn không gian chiều dọc
+
           Expanded(
             child: ListView.builder(
               itemCount: movies.length,

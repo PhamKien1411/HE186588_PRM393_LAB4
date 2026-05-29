@@ -12,27 +12,27 @@ class CoreWidgetsDemo extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Headline Text
+
             const Text(
               'Welcome to Flutter UI',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
 
-            // Icon sử dụng Material Icons
-            const Icon(Icons.movie, size: 60, color: Colors.blue),
+
+            Icon(Icons.movie, size: 60, color: Colors.blue),
             const SizedBox(height: 20),
 
-            // Image.network lấy ảnh ngẫu nhiên hợp lệ URL
-            Image.network(
-              'https://picsum.photos/400/200',
+
+            Image.asset(
+              'assets/cat1.jpg',
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
             const SizedBox(height: 20),
 
-            // Card chứa ListTile bên trong
+
             const Card(
               child: ListTile(
                 leading: Icon(Icons.star),
